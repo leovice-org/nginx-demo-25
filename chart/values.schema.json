@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "image": {
+      "additionalProperties": true,
+      "properties": {
+        "repository": {
+          "default": "nginx",
+          "title": "repository",
+          "type": "string"
+        },
+        "tag": {
+          "default": "1.25",
+          "title": "tag",
+          "type": "string"
+        }
+      },
+      "required": [
+        "repository",
+        "tag"
+      ],
+      "title": "image",
+      "type": "object"
+    },
+    "service": {
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "default": "ClusterIP",
+          "title": "type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "service",
+      "type": "object"
+    }
+  },
+  "required": [
+    "image",
+    "service"
+  ],
+  "type": "object"
+}
